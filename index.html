@@ -3,26 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="La Maniobra Adama es un podcast donde Pedro y Mario exploran series, películas, libros, cómics y heavy metal con humor galáctico. Aprende Python con nosotros y descubre el universo del entretenimiento.">
+    <!-- Metadatos SEO -->
+    <meta name="description" content="La Maniobra Adama es un podcast donde Pedro y Mario exploran series, películas, libros, cómics y heavy metal con humor escatopérlico">
     <meta name="keywords" content="podcast, La Maniobra Adama, series, películas, libros, cómics, heavy metal, humor, aprende Python, teletrabajo, entretenimiento">
     <meta name="author" content="Pedro Trombo y Mario Villatoro">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="La Maniobra Adama - Podcast de Series, Películas y Humor Galáctico">
+    <meta property="og:title" content="La Maniobra Adama - Podcast de Series, Películas y Humor ">
     <meta property="og:description" content="Explora series, películas, libros, cómics y heavy metal con Pedro y Mario en La Maniobra Adama. Un podcast lleno de humor y pasión por el entretenimiento.">
-    <meta property="og:image" content="https://yt3.googleusercontent.com/kMOZFOZnEvrRc0ywG3YQhHEitPimHAPEVXYmu-jPn0o2s3CJzD2UzP2vEjRL66c2gqLr1-VLBQ=s160-c-k-c0x00ffffff-no-rj">
-    <meta property="og:url" content="https://ejemplo.com/la-maniobra-adama">
+    <meta property="og:image" content="https://static-1.ivoox.com/canales/8/e/e/a/8eea4689d7fd59cb4254b4372c158ad9_XXL.jpg">
+    <meta property="og:url" content="https://pedrotrombo.github.io/la-maniobra-adama-podcast/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="La Maniobra Adama - Podcast de Series, Películas y Humor Galáctico">
-    <meta name="twitter:description" content="Explora series, películas, libros, cómics y heavy metal con Pedro y Mario en La Maniobra Adama. Un podcast lleno de humor y pasión por el entretenimiento.">
-    <meta name="twitter:image" content="https://yt3.googleusercontent.com/kMOZFOZnEvrRc0ywG3YQhHEitPimHAPEVXYmu-jPn0o2s3CJzD2UzP2vEjRL66c2gqLr1-VLBQ=s160-c-k-c0x00ffffff-no-rj">
+    <meta name="twitter:description" content="La Maniobra Adama es un podcast que está entre la maniobra de Valsalva y un abanico chileno bien hecho. Aunque en ocasiones se parecerá más a un timón holandés. Pero en definitiva, lo que quiera que sea este podcast da igual, lo importante es echarse unas risas y pasar el rato con el amigo Mario Villatoro.">
+    <meta name="twitter:image" content="https://static-1.ivoox.com/canales/8/e/e/a/8eea4689d7fd59cb4254b4372c158ad9_XXL.jpg">
     <title>La Maniobra Adama - Podcast de Series, Películas y Humor Galáctico</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts: Usando 'Bangers' para cabeceras y 'Roboto' para el resto del texto -->
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Estilos previos... */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif; /* Tipografía redondeada */
+            color: #ffffff;
+            background: linear-gradient(135deg, #62067e, #eb4179, #fb7266);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Efecto de estrellas en el fondo */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 5s infinite ease-in-out;
+            opacity: 1;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* Añadiendo más estrellas */
+        .stars .star:nth-child(1) { top: 5%; left: 10%; width: 2px; height: 2px; }
+        .stars .star:nth-child(2) { top: 15%; left: 30%; width: 3px; height: 3px; }
+        /* ... (resto de las estrellas) ... */
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+        .section {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-family: 'Bangers', cursive;
+            text-align: center;
+            margin-top: 0;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+        footer {
+            background: #62067e;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Plataformas con logotipos de Bootstrap Icons */
+        .platforms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .platforms a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            color: white;
+        }
+        .platforms a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .platforms i {
+            margin-right: 5px;
+            font-size: 1.2rem;
+        }
+
+        /* Enlaces personalizados */
+        a.custom-link {
+            color: white;
+            text-decoration: underline;
+        }
+        a.custom-link:hover {
+            color: #62067e;
+            text-decoration: none;
+        }
+
+        /* Espaciado entre <li> */
+        .maniobra-adama ul {
+            list-style: none;
+            padding: 0;
+        }
+        .maniobra-adama li {
+            margin-bottom: 20px;
+        }
+
+        /* Media Queries para diseño mobile-first */
+        @media (min-width: 768px) {
+            header h1 {
+                font-size: 3rem;
+            }
+            .section h2 {
+                font-size: 1.8rem;
+            }
+            .platforms a {
+                padding: 15px 30px;
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -30,12 +174,15 @@
     <!-- Efecto de estrellas -->
     <div class="stars">
         <!-- Código de estrellas... -->
+        <div class="star" style="top: 5%; left: 10%; width: 2px; height: 2px;"></div>
+        <div class="star" style="top: 15%; left: 30%; width: 3px; height: 3px;"></div>
+        <!-- ... (añade más estrellas aquí) ... -->
     </div>
 
     <!-- Header -->
     <header>
         <h1>La Maniobra Adama</h1>
-        <p>Somos Pedro y Mario, dos apasionados del podcasting que queremos aprender Python para teletrabajar. ¡Así tendremos más tiempo para grabar y menos estrés! Con humor galáctico y código terrestre, aquí estamos.</p>
+        <p>Somos Pedro y Mario, 2 apasionados del podcasting que tratamos de aprender Python, Javascript o lo que se terci para tele-trabajar. ¡Así tendremos más tiempo para cuidar a nuestro bástagos, grabar episodios y también, menos estrés! Si hay por ahí algún cazatalentos a la escucha, aquí tiene a 2 viejos juniors con las softs skills a tope. :)</p>
     </header>
 
     <!-- Main Content -->
@@ -43,32 +190,27 @@
         <!-- Último Episodio -->
         <div class="section" id="ultimo-episodio">
             <h2>Último Episodio</h2>
-            <p>Episodio 42: El Futuro de los Podcasts</p>
+            <p>Episodio 31. Broma telefónica y la gran caída de Mario</p>
             <iframe src="https://www.ivoox.com/player_ej_139478545_6_1.html?c1=62067e" width="100%" height="200" frameborder="0" allowfullscreen="" scrolling="no" loading="lazy"></iframe>
-            <div class="text-center mt-3">
-                <a href="#" class="custom-link">Escuchar este episodio</a>
-            </div>
         </div>
 
         <!-- El Zen de La Maniobra Adama -->
         <div class="section maniobra-adama" id="nosotros">
             <h2>El Zen de La Maniobra Adama</h2>
             <ul>
-                <li><strong>Primera regla:</strong> No hablar de La Maniobra Adama.</li>
-                <li>Pero si insistes, estamos aquí para hablar de todo... y reírnos de nosotros mismos.</li>
-                <li>El humor es nuestro combustible. Si no te ríes al menos tres veces por episodio, algo estamos haciendo mal.</li>
-                <li>Nuestra pasión son las pelis, las series, los libros, los cómics y, cómo no, el heavy metal. Todo tiene cabida en esta galaxia.</li>
-                <li>Tim Peters mola un montón. Y también nos inspira, aunque no entendamos bien lo que dice.</li>
+                <li>La primera regla de La Maniobra Adama es no hablar de La Maniobra Adama.</li>
+                <li>Pero si insistes, estamos aquí para hablar de todo... y soltar la risotada siempre que se pueda.</li>
+                <li>El humor es nuestro combustible. Si no te ríes al menos 3 veces por episodio, algo estamos haciendo mal.</li>
+                <li>Nuestra pasión son las pelis, las series, los libros, los cómics y, cómo no, el heavy metal. Todo tiene cabida en este universo.</li>
+                <li>Tim Peters mola un montón. Y también nos inspira, aunque no entendamos muy bien lo que quiere decir.</li>
                 <li><strong>Última regla:</strong> Romper todas las reglas. Excepto esta, claro.</li>
             </ul>
-            <div class="text-center mt-3">
-                <a href="#" class="custom-link">Descubre nuestro Zen</a>
-            </div>
+    
         </div>
 
         <!-- Plataformas -->
         <div class="section platforms" id="plataformas">
-            <h2>Disponible en:</h2>
+            <h2>Disponible en todos estos sitios:</h2>
             <div class="platforms">
                 <a href="https://www.ivoox.com/podcast-maniobra-adama_sq_f11795912_1.html" target="_blank"><i class="bi bi-ivoox"></i> Ivoox</a>
                 <a href="https://podcasts.apple.com/es/podcast/la-maniobra-adama/id1671172514" target="_blank"><i class="bi bi-apple"></i> Apple Podcasts</a>
@@ -80,8 +222,8 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 La Maniobra Adama. Todos los derechos reservados.</p>
-        <p>info.maniobradama@gmail.com</p>
+        <p>&copy; 2025 La Maniobra Adama - Podcast. Todos los derechos reservados.</p>
+        <span>info.maniobradama@gmail.com</span>
     </footer>
 
     <!-- Schema.org para SEO -->
@@ -90,10 +232,10 @@
       "@context": "https://schema.org",
       "@type": "PodcastSeries",
       "name": "La Maniobra Adama",
-      "description": "Un podcast donde Pedro y Mario exploran series, películas, libros, cómics y heavy metal con humor galáctico. Aprende Python con nosotros y descubre el universo del entretenimiento.",
+      "description": "La Maniobra Adama es un podcast que está entre la maniobra de Valsalva y un "abanico chileno" bien hecho. Aunque en ocasiones se parecerá más a un "timón holandés". Pero en definitiva, lo que quiera que sea este podcast da igual, lo importante es echarse unas risas y pasar el rato con el amigo Mario Villatoro.",
       "image": "https://yt3.googleusercontent.com/kMOZFOZnEvrRc0ywG3YQhHEitPimHAPEVXYmu-jPn0o2s3CJzD2UzP2vEjRL66c2gqLr1-VLBQ=s160-c-k-c0x00ffffff-no-rj",
       "url": "https://ejemplo.com/la-maniobra-adama",
-      "genre": "Entretenimiento, Humor, Tecnología",
+      "genre": "Entretenimiento, Cine, Series, Humor, Tecnología",
       "author": {
         "@type": "Person",
         "name": "Pedro Trombo y Mario Villatoro"
@@ -103,14 +245,14 @@
         "name": "La Maniobra Adama",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://yt3.googleusercontent.com/kMOZFOZnEvrRc0ywG3YQhHEitPimHAPEVXYmu-jPn0o2s3CJzD2UzP2vEjRL66c2gqLr1-VLBQ=s160-c-k-c0x00ffffff-no-rj"
+          "url": "https://img-static.ivoox.com/index.php?w=175&h=175&url=https://static-1.ivoox.com/canales/8/e/e/a/8eea4689d7fd59cb4254b4372c158ad9_XXL.jpg"
         }
       },
       "episode": [
         {
           "@type": "PodcastEpisode",
-          "name": "Episodio 42: El Futuro de los Podcasts",
-          "description": "En este episodio hablamos sobre el futuro de los podcasts y cómo queremos aprender Python para teletrabajar.",
+          "name": "31. Broma telefónica y la gran caída de Marios",
+          "description": "Amigos y amigas de La Maniobra Adama, en este episodio especial nos hemos juntado tres titanes del entretenimiento: Mario, Pedro y Ramón (a.k.a. El Primo del Mierdas). Como si eso no fuera suficiente, estrenamos una broma telefónica inédita cortesía de nuestro colega Controla (¡desde aquí un abrazo, máquina!).",
           "url": "https://www.ivoox.com/player_ej_139478545_6_1.html?c1=62067e",
           "datePublished": "2025-01-01",
           "duration": "PT30M"
@@ -118,8 +260,5 @@
       ]
     }
     </script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
