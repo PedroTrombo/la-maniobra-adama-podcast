@@ -49,6 +49,7 @@ Aquí está nuestro código no oficial:
 Si tienes preguntas, sugerencias o simplemente quieres decirnos lo mucho que te encanta el podcast, no dudes en escribirnos:
 
 📧 Correo electrónico: info.maniobradama@gmail.com
+
 🌐 Telegram: https://t.me/lamaniobraadama
 
 ---
