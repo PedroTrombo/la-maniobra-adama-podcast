@@ -20,13 +20,22 @@
     <title>La Maniobra Adama - Podcast de Series, Películas y Humor</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts: Usando 'Chewy' para cabeceras y 'Roboto' para el resto del texto -->
-    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
 
     <style>
+
+@font-face {
+            font-family: 'Porkys';
+            src: url('fonts/PORKH___.TTF') format('truetype'),
+                 url('fonts/PORKYS_.TTF') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+}
+
+
         body {
             margin: 0;
-            font-family: 'Roboto', sans-serif; /* Tipografía redondeada */
+            font-family: sans-serif; /* Tipografía redondeada */
             color: #ffffff;
             background: linear-gradient(135deg, #62067e, #eb4179, #fb7266);
             min-height: 100vh;
@@ -82,10 +91,13 @@
             padding: 20px;
             text-align: center;
         }
+
+        
         header h1 {
-            font-family: 'Chewy', cursive;
+            font-family: 'Porkys';
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            letter-spacing: 2px;
         }
         header p {
             font-size: 1.2rem;
@@ -101,10 +113,11 @@
             margin-bottom: 20px;
         }
         .section h2 {
-            font-family: 'Chewy', cursive;
+            font-family: 'Porkys';
             text-align: center;
             margin-top: 0;
             margin-bottom: 15px; /* Espacio debajo de las cabeceras */
+            letter-spacing: 2px;
         }
         iframe {
             width: 100%;
@@ -228,7 +241,7 @@
 
             <!-- El Zen de La Maniobra Adama -->
             <div class="section maniobra-adama" id="nosotros">
-                <h2>El Zen de La Maniobra Adama</h2>
+                <h2>Nuestro Zen</h2>
                 <ul>
                     <li><strong>Primera regla:</strong> No hablar de La Maniobra Adama.</li>
                     <li>Pero si insistes, estamos aquí para hablar de todo... y soltar la risotada siempre que se pueda.</li>
