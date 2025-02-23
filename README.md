@@ -1,6 +1,6 @@
-# 🚀 La Maniobra Adama - Podcast de Series, Películas y Humor Galáctico
+# 🚀 La Maniobra Adama - Podcast de Series, Películas y Humor de Andar por Casa.
 
-¡Bienvenido al universo de La Maniobra Adama, donde el humor galáctico y la pasión por las series, películas, libros, cómics y heavy metal se encuentran en una explosión de entretenimiento! Somos Pedro Trombo y Mario Villatoro, dos podcasters decididos a aprender Python para teletrabajar... ¡y así tener más tiempo para hacer lo que realmente amamos: grabar podcasts!
+¡Bienvenido al universo de La Maniobra Adama, donde el humor escatopérlico y la pasión por las series, películas, libros, cómics y heavy metal se encuentran en una explosión de entretenimiento! Somos Pedro Trombo y Mario Villatoro, 2 podcasters decididos a aprender Python, JS o lo que se tercie para tele-trabajar... ¡y así tener más tiempo para hacer lo que realmente amamos: grabar podcasts!
 
 ---
 
