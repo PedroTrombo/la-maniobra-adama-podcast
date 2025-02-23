@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--Favicon-->
+    <!--Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#62067e">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/css-adama.css">
+
+
     <!-- Metadatos SEO -->
     <meta name="description"
         content="La Maniobra Adama es un podcast donde Pedro y Mario exploran series, películas, libros, cómics y heavy metal con humor galáctico. Aprende Python con nosotros y descubre el universo del entretenimiento.">
@@ -28,260 +34,10 @@
     <meta name="twitter:image"
         content="https://static-1.ivoox.com/canales/8/e/e/a/8eea4689d7fd59cb4254b4372c158ad9_XXL.jpg">
     <title>La Maniobra Adama - Podcast de Series, Películas y Humor</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <style>
-        @font-face {
-            font-family: 'Porkys';
-            src: url('fonts/PORKH___.TTF') format('truetype'),
-                url('fonts/PORKYS_.TTF') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
 
-
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            /* Tipografía redondeada */
-            color: #ffffff;
-            background: linear-gradient(135deg, #62067e, #eb4179, #fb7266);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-
-        /* Contenedor principal con margen lateral */
-        .container-custom {
-            max-width: 99%;
-            /* Ancho máximo del contenido */
-            padding: 0 20px;
-            /* Margen izquierdo y derecho */
-            margin: 0 auto;
-            /* Centrado horizontal */
-        }
-
-        /* Efecto de estrellas en el fondo */
-        .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .star {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 5s infinite ease-in-out;
-            opacity: 1;
-        }
-
-        @keyframes twinkle {
-
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.5;
-                transform: scale(1.2);
-            }
-        }
-
-        /* Añadiendo más estrellas */
-        .stars .star:nth-child(3) {
-            top: 25%;
-            left: 50%;
-            width: 2px;
-            height: 2px;
-        }
-
-        /* ... (resto de las estrellas) ... */
-
-        header {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            text-align: center;
-            border-bottom-left-radius: 10px;
-            /* Redondea la esquina superior izquierda */
-            border-bottom-right-radius: 10px;
-            /* Redondea la esquina superior derecha */
-        }
-
-
-        header h1 span {
-            font-family: 'Porkys';
-            display: block;
-            text-transform: uppercase;
-            font-size: 3rem;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            margin-top: 2rem;
-            font-size: 1.1rem;
-        }
-
-        main {
-            flex: 1;
-            padding: 20px 0;
-            /* Espacio superior e inferior */
-        }
-
-        .section {
-            background: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .section h2 {
-            font-family: 'Porkys';
-            text-transform: uppercase;
-            font-size: 2.3rem;
-            text-align: center;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
-            /* Espacio debajo de las cabeceras */
-            letter-spacing: 2px;
-        }
-
-        .section p {
-            font-size: 1.1rem;
-        }
-
-        iframe {
-            width: 100%;
-            height: 200px;
-            border: none;
-        }
-
-        footer {
-            background: #62067e;
-            color: white;
-            text-align: center;
-            border-top-left-radius: 10px;
-            /* Redondea la esquina superior izquierda */
-            border-top-right-radius: 10px;
-            /* Redondea la esquina superior derecha */
-        }
-
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Plataformas con logotipos de Bootstrap Icons */
-        .platforms {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        .platforms a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-            transition: background 0.3s ease;
-            text-decoration: none;
-            color: white;
-            flex: 1 1 150px;
-            /* Esto asegura que todos tengan el mismo tamaño mínimo */
-            min-width: 120px;
-            /* Asegura que no se reduzcan por debajo de este tamaño */
-            height: 80px;
-            /* Altura uniforme */
-        }
-
-        .platforms a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .platforms i {
-            margin-right: 5px;
-            font-size: 1.1rem;
-        }
-
-        /* Enlaces personalizados */
-        a.custom-link {
-            color: white;
-            text-decoration: underline;
-        }
-
-        a.custom-link:hover {
-            color: #62067e;
-            text-decoration: none;
-        }
-
-        /* Espaciado entre <li> */
-        .maniobra-adama ul {
-            list-style: none;
-            /* Eliminamos las viñetas por defecto */
-            padding: 0;
-        }
-
-        .maniobra-adama li {
-            margin-bottom: 20px;
-            font-size: 1.1em;
-            position: relative;
-            padding-left: 25px;
-            /* Espacio para el icono */
-        }
-
-        .maniobra-adama li::before {
-            content: "⭐";
-            /* Puedes cambiarlo por otro emoji */
-            margin-right: 0.3em;
-            /* Espacio después del icono */
-            display: inline-block;
-        }
-
-
-        /* Media Queries para diseño mobile-first */
-        @media (min-width: 1200px) {
-
-            .container-custom {
-                max-width: 800px;
-                /* Ancho máximo del contenido */
-                padding: 0 20px;
-                /* Margen izquierdo y derecho */
-                margin: 0 auto;
-                /* Centrado horizontal */
-            }
-
-            header h1 {
-                font-size: 3rem;
-            }
-
-            .section h2 {
-                font-size: 1.8rem;
-            }
-
-            .platforms a {
-                padding: 15px 30px;
-                font-size: 1rem;
-            }
-        }
-    </style>
+    
 </head>
 
 <body>
@@ -336,7 +92,7 @@
             <!-- Último Episodio -->
             <div class="section" id="ultimo-episodio">
                 <h2>Último Episodio</h2>
-                <p>Episodio 31: Broma telefónica y la gran caída de Mario</p>
+                <p>Episodio 31: Broma telefónica y la gran caída de Mario.</p>
                 <iframe src="https://www.ivoox.com/player_ej_139478545_6_1.html?c1=62067e" width="100%" height="200"
                     frameborder="0" allowfullscreen="" scrolling="no" loading="lazy"></iframe>
 
@@ -382,8 +138,8 @@
 
         <!-- Footer -->
         <footer class="py-1 mt-auto">
-            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">             
-                <a href="https://bsky.app/profile/lamaniobraadama.bsky.social" target="_blank"> 
+            <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+                <a href="https://bsky.app/profile/lamaniobraadama.bsky.social" target="_blank">
                     Bluesky
                 </a>
                 <span class="text-white mx-2">|</span> <!-- Barra vertical aquí -->
@@ -395,9 +151,9 @@
                     E-mail
                 </a>
             </div>
-            <p class="mb-0">&copy; 2025 La Maniobra Adama - Podcast. <br/>¡Y que viva el Heavy Metal!🤘🤘</p>
+            <p class="mb-0">&copy; 2025 La Maniobra Adama - Podcast. <br />¡Y que viva el Heavy Metal!🤘🤘</p>
         </footer>
-        
+
 
     </div>
 
@@ -410,7 +166,7 @@
       "description": "Un podcast donde Pedro y Mario exploran series, películas, libros, cómics y heavy metal con humor galáctico.",
       "image": "https://img-static.ivoox.com/index.php?w=175&h=175&url=https://static-1.ivoox.com/canales/8/e/e/a/8eea4689d7fd59cb4254b4372c158ad9_XXL.jpg",
       "url": "https://pedrotrombo.github.io/la-maniobra-adama-podcast/",
-      "genre": "Entretenimiento, Humor, Tecnología",
+      "genre": ["Entretenimiento", "Cine", "Series", "Cultura Pop", "Humor", "Vida y Sociedad"],
       "author": {
         "@type": "Person",
         "name": "Pedro Trombo y Mario Villatoro"
