@@ -36,8 +36,6 @@
     <title>La Maniobra Adama - Podcast de Series, Películas y Humor</title>
 
 
-
-
 </head>
 
 <body>
@@ -92,7 +90,7 @@
             <!-- Último Episodio -->
             <div class="section" id="ultimo-episodio">
                 <h2>Último Episodio</h2>
-                
+
                 <p id="episode-title">Cargando episodio...</p>
                 <iframe id="podcast-iframe" width="100%" height="200" frameborder="0" allowfullscreen="" scrolling="no"
                     loading="lazy"></iframe>
@@ -153,7 +151,8 @@
                     E-mail
                 </a>
             </div>
-            <p class="mb-0">&copy; 2025 La Maniobra Adama - Podcast. <br />¡Y que viva el Heavy Metal!🤘🤘</p>
+            <p class="mb-0">&copy; <span id="year"></span> La Maniobra Adama - Podcast. <br />¡Y que viva el Heavy
+                Metal!🤘🤘</p>
         </footer>
 
 
@@ -186,50 +185,10 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Scrapping episodio  -->
-    <script>
-        async function fetchLatestEpisode() {
-            const feedUrl = "https://www.ivoox.com/feed_fg_f11795912_filtro_1.xml"; // Feed real de tu podcast
-
-            try {
-                const response = await fetch(feedUrl);
-                const text = await response.text();
-                const parser = new DOMParser();
-                const xml = parser.parseFromString(text, "text/xml");
-
-                const latestEpisode = xml.querySelector("item"); // Obtiene el último episodio
-                if (!latestEpisode) {
-                    document.getElementById("episode-title").textContent = "No se encontró ningún episodio.";
-                    return;
-                }
-
-                const title = latestEpisode.querySelector("title").textContent;
-                const link = latestEpisode.querySelector("link").textContent; // URL del episodio
-
-                // Extraer el ID del episodio desde el enlace de iVoox
-                const match = link.match(/_(\d+)_/);
-                if (!match) {
-                    document.getElementById("episode-title").textContent = "No se pudo obtener el ID del episodio.";
-                    return;
-                }
-
-                const episodeId = match[1]; // Extraemos el ID del episodio
-
-                // Generamos la URL del iframe con el nuevo episodio
-                const iframeUrl = `https://www.ivoox.com/player_ej_${episodeId}_6_1.html?c1=62067e`;
-
-                // Actualizamos el título y el iframe en la web
-                document.getElementById("episode-title").textContent = title;
-                document.getElementById("podcast-iframe").src = iframeUrl;
-
-            } catch (error) {
-                console.error("Error obteniendo el feed RSS:", error);
-                document.getElementById("episode-title").textContent = "Error al cargar el episodio.";
-            }
-        }
-
-        fetchLatestEpisode();
-    </script>
+    <!-- Scrap último episodio JS -->
+    <script src="js/last-episode.js"></script>
+    <!-- año actual JS -->
+    <script src="js/year.js"></script>
 
 </body>
 
