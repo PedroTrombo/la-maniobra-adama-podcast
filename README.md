@@ -48,9 +48,13 @@ Aquí está nuestro código no oficial:
 
 Si tienes preguntas, sugerencias o simplemente quieres decirnos lo mucho que te encanta el podcast, no dudes en escribirnos:
 
-📧 Correo electrónico: info.maniobradama@gmail.com
+🖱️ Web: https://pedrotrombo.github.io/la-maniobra-adama-podcast/
+
+📧 E-mail: info.maniobradama@gmail.com
 
 🌐 Telegram: https://t.me/lamaniobraadama
+
+🔵 Bluesky https://bsky.app/profile/lamaniobraadama.bsky.social
 
 ---
 
