@@ -1,9 +1,18 @@
+/* Fuente Regular */
 @font-face {
   font-family: "Porkys";
-  src: url("../fonts/PORKH___.TTF") format("truetype"),
-    url("../fonts/PORKYS_.TTF") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  src: url("../fonts/PORKH___.TTF") format("truetype");
+  font-weight: bold; /* Peso negrita */
+  font-style: normal; /* Estilo normal */
+  font-display: swap;
+}
+
+/* Fuente Negrita (si PORKYS_.TTF es negrita) */
+@font-face {
+  font-family: "Porkys-regular";
+  src: url("../fonts/PORKYS_.TTF") format("truetype");
+  font-weight: normal; /* Peso negrita */
+  font-style: normal; /* Estilo normal */
   font-display: swap;
 }
 
@@ -90,6 +99,7 @@ header h1 span {
 }
 
 header p {
+ 
   margin-top: 2rem;
   font-size: 1.1rem;
 }
