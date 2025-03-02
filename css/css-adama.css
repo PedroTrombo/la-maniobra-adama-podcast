@@ -91,7 +91,7 @@ header h1 span {
 
 header p {
   margin-top: 2rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 main {
@@ -119,7 +119,7 @@ main {
 }
 
 .section p {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 iframe {
@@ -183,7 +183,7 @@ footer a:hover {
 
 .platforms i {
   margin-right: 5px;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Enlaces personalizados */
@@ -206,7 +206,7 @@ a.custom-link:hover {
 
 .maniobra-adama li {
   margin-bottom: 20px;
-  font-size: 1.1em;
+  font-size: 1em;
   position: relative;
   padding-left: 25px;
   /* Espacio para el icono */
@@ -241,6 +241,6 @@ a.custom-link:hover {
 
   .platforms a {
     padding: 15px 30px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
