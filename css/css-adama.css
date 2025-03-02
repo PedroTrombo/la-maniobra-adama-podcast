@@ -1,4 +1,4 @@
-/* Fuente Regular */
+
 @font-face {
   font-family: "Porkys";
   src: url("../fonts/PORKH___.TTF") format("truetype");
@@ -7,7 +7,6 @@
   font-display: swap;
 }
 
-/* Fuente Negrita (si PORKYS_.TTF es negrita) */
 @font-face {
   font-family: "Porkys-regular";
   src: url("../fonts/PORKYS_.TTF") format("truetype");
@@ -218,12 +217,13 @@ a.custom-link:hover {
   margin-bottom: 20px;
   font-size: 1em;
   position: relative;
-  padding-left: 25px;
+  padding-left: 15px;
   /* Espacio para el icono */
 }
 
 .maniobra-adama li::before {
   content: "⭐";
+  font-size: 0.9em;
   /* Puedes cambiarlo por otro emoji */
   margin-right: 0.2em;
   /* Espacio después del icono */
@@ -258,8 +258,19 @@ a.custom-link:hover {
     font-size: 1rem;
   }
 
+  .maniobra-adama li::before {
+    content: "⭐";
+    font-size: 1em;
+    /* Puedes cambiarlo por otro emoji */
+    margin-right: 0.2em;
+    /* Espacio después del icono */
+    display: inline-block;
+  }
+  
+
   .platforms a {
     padding: 15px 30px;
     font-size: 1rem;
   }
+
 }
