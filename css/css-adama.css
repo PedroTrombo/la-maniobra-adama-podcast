@@ -174,7 +174,7 @@ footer a:hover {
   /* Asegura que no se reduzcan por debajo de este tamaño */
   height: 80px;
   /* Altura uniforme */
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .platforms a:hover {
