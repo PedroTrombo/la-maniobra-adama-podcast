@@ -253,6 +253,7 @@ a.custom-link:hover {
 
 .bestiario .card-title,
 .bestiario .card-text {
+  font-size: 1em;
   color: white;
   /* Asegurando que el texto es blanco */
 }
