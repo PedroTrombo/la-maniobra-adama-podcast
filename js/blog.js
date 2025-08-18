@@ -90,7 +90,7 @@ function renderPosts() {
         const nextBtn = pagination.querySelector('.next');
         const pageInfo = pagination.querySelector('.page-info');
 
-        pageInfo.textContent = `Página ${formatPageNumber(currentPage)} de ${formatPageNumber(totalPages)}`;
+        pageInfo.textContent = `Pág ${formatPageNumber(currentPage)}/${formatPageNumber(totalPages)}`;
         prevBtn.disabled = currentPage === 1;
         nextBtn.disabled = currentPage === totalPages;
     });

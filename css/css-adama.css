@@ -330,6 +330,7 @@ a.custom-link:hover {
 .page-info {
   font-size: 0.95rem;
   color: #fff;
+  text-align: center;
 }
 
 .pagination button {
