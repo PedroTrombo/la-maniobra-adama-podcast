@@ -120,7 +120,7 @@ document.querySelectorAll('.pagination .next').forEach(btn => {
 
             // 👇 Scroll hacia arriba cuando clicas en paginador inferior
             if (btn.closest('.pagination').classList.contains('bottom')) {
-                document.querySelector('.pagination.top')
+                   document.getElementById('page-title')
                     .scrollIntoView({ behavior: 'smooth' });
             }
         }
