@@ -73,7 +73,7 @@ function renderPosts() {
                <span class="post-date">${fechaFormateada}</span> \u2022 
                <span class="post-duration">${post.duration || ''} min</span>
             </div>
-            <p class="post-snippet">${truncateText(post.contentSnippet, 470)}</p>
+            <p class="post-snippet">${truncateText(post.contentSnippet, 270)}</p>
             <a href="/episodios/${slug}" 
                class="post-button" 
                title='${post.title ? post.title + " - Escuchar episodio" : "Escuchar episodio"}'>
