@@ -286,6 +286,7 @@ a.custom-link:hover {
   color: #ccc;
   font-size: 0.9rem;
   margin: 0 1rem 0.5rem;
+  text-align: center;
 }
 
 /* Texto */
