@@ -84,17 +84,16 @@ function renderPosts() {
         container.appendChild(article);
     });
 
-    // 🔥 Actualiza los dos paginadores
-    document.querySelectorAll('.pagination').forEach(pagination => {
-        const prevBtn = pagination.querySelector('.prev');
-        const nextBtn = pagination.querySelector('.next');
-        const pageInfo = pagination.querySelector('.page-info');
+   // 🔥 Actualiza los dos paginadores
+document.querySelectorAll('.pagination').forEach(pagination => {
+    const prevBtn = pagination.querySelector('.prev');
+    const nextBtn = pagination.querySelector('.next');
+    const pageInfo = pagination.querySelector('.page-info');
 
-        pageInfo.textContent = `Pág ${formatPageNumber(currentPage)}/${formatPageNumber(totalPages)}`;
-        prevBtn.disabled = currentPage === 1;
-        nextBtn.disabled = currentPage === totalPages;
-    });
-}
+    pageInfo.textContent = `Pág ${formatPageNumber(currentPage)}/${formatPageNumber(totalPages)}`;
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+});
 
 // Eventos de paginación (delegados para ambos paginadores)
 document.querySelectorAll('.pagination .prev').forEach(btn => {
@@ -102,6 +101,12 @@ document.querySelectorAll('.pagination .prev').forEach(btn => {
         if (currentPage > 1) {
             currentPage--;
             renderPosts();
+
+            // 👇 Scroll hacia arriba cuando clicas en paginador inferior
+            if (btn.closest('.pagination').classList.contains('bottom')) {
+                document.querySelector('.pagination.top')
+                    .scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 });
@@ -112,10 +117,15 @@ document.querySelectorAll('.pagination .next').forEach(btn => {
         if (currentPage < totalPages) {
             currentPage++;
             renderPosts();
+
+            // 👇 Scroll hacia arriba cuando clicas en paginador inferior
+            if (btn.closest('.pagination').classList.contains('bottom')) {
+                document.querySelector('.pagination.top')
+                    .scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 });
 
 // Inicializa la carga
 loadPosts();
-
