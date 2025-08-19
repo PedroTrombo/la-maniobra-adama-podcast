@@ -352,9 +352,15 @@ a.custom-link:hover {
 
 #page-title a {
   text-decoration: none;   /* Quita el subrayado */
-  color: inherit;          /* Hereda el color del padre */
-  font: inherit;           /* Hereda la tipografía y peso */
+  color: inherit;          /* Hereda el color del h1 */
+  font: inherit;           /* Hereda la tipografía */
   cursor: pointer;         /* Mantiene el puntero de enlace */
+  transition: opacity 0.2s ease; /* Animación suave */
+}
+
+#page-title a:hover,
+#page-title a:focus {
+  opacity: 0.8; /* Ligero cambio de opacidad */
 }
 
 /* Meta: fecha y duración */
