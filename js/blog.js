@@ -14,13 +14,32 @@ function formatDate(isoDate) {
 
 // Genera un slug genérico a partir del título
 function generateSlug(title) {
-    if (!title) return 'episodio-generico';
-    return title.toLowerCase()
-                .replace(/[^\w\s-]/g, '')
-                .trim()
-                .replace(/\s+/g, '-')
-                .replace(/-+/g, '-');
+    if (!title) return 'episodio-generico.html';
+
+    // Normaliza acentos y caracteres raros
+    let cleanTitle = title.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    // Detecta si empieza con número + punto
+    const match = cleanTitle.match(/^(\d+)\.\s*(.*)$/);
+    let number = "";
+    if (match) {
+        number = match[1]; // el número inicial
+        cleanTitle = match[2]; // el resto del título sin número
+    }
+
+    // Genera slug
+    let slug = cleanTitle.toLowerCase()
+        .replace(/[^\w\s-]/g, '')   // quita símbolos
+        .trim()
+        .replace(/\s+/g, '-')       // espacios -> guiones
+        .replace(/-+/g, '-');       // guiones múltiples -> uno
+
+    // Si había número, lo manda al final
+    if (number) slug = `${slug}-${number}`;
+
+    return slug + ".html";
 }
+
 
 // Truncar texto con puntos suspensivos
 function truncateText(text, maxLength) {
