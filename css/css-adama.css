@@ -345,7 +345,14 @@ a.custom-link:hover {
   font-size: 1.9rem;
   color: #fff;
   margin: 1rem;
-  letter-spacing: 2px;
+  letter-spacing: 2px; 
+}
+
+#page-title a {
+  text-decoration: none;   /* Quita el subrayado */
+  color: inherit;          /* Hereda el color del padre */
+  font: inherit;           /* Hereda la tipografía y peso */
+  cursor: pointer;         /* Mantiene el puntero de enlace */
 }
 
 /* Meta: fecha y duración */
