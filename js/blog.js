@@ -36,7 +36,7 @@ function formatPageNumber(num) {
 // Carga los posts desde el JSON externo
 async function loadPosts() {
     try {
-        const response = await fetch('/data/posts.json'); 
+        const response = await fetch('n8n-adama/data/posts.json'); 
         const data = await response.json();
         posts = data.episodes || [];
         renderPosts();
