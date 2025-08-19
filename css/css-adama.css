@@ -201,7 +201,7 @@ main {
   font-size: 1.9rem;
   text-align: center;
   margin: 1rem 0 1.7rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .section p {
@@ -376,7 +376,7 @@ a.custom-link:hover {
 /* Botón de Escuchar ahora */
 .post-button {
   font-family: "Porkys-regular";
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   display: block;
   background: #62067e;
   color: white;
