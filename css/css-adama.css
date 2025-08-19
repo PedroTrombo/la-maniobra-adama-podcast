@@ -34,29 +34,95 @@ body {
   margin: 0 auto;
 }
 
-/* Nav */
-nav {
-
-  padding: 0px 0px 0px 0px;
+/* NAV estilos base */
+.navbar {
+  background: transparent;
   text-align: center;
-  padding-bottom: 0.5em;
-
-
+  padding: 0.5em 0em 0.8em
 }
 
-nav a {
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-links a {
   color: white;
   text-decoration: none;
-
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-radius: 6px;
   transition: background 0.3s ease, color 0.3s ease;
+  padding: 0.5em 0.9em;
 }
 
-nav a:hover {
+.nav-links a:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
+
+/* Botón hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    z-index: 9999;
+    /* siempre encima */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    /* un poco más oscuro para contraste */
+    position: absolute;
+    top: 70px;
+    /* ajusta según la altura de tu header */
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+    /* suficiente para todos los enlaces */
+    opacity: 1;
+  }
+
+  .nav-links a {
+    padding: 0.8em;
+    text-align: left;
+  }
+}
+
 
 /* Estrellas de fondo */
 .stars {
@@ -94,7 +160,7 @@ nav a:hover {
 /* Header */
 header {
   background: rgba(0, 0, 0, 0.8);
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
   text-align: center;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -131,7 +197,7 @@ main {
   text-transform: uppercase;
   font-size: 1.9rem;
   text-align: center;
-  margin: 1rem 0 2rem;
+  margin: 1rem 0 1.7rem;
   letter-spacing: 2px;
 }
 
@@ -368,6 +434,7 @@ a.custom-link:hover {
   header p,
   .section p {
     font-size: 1rem;
+    text-align: center;
   }
 
   .section h2 {

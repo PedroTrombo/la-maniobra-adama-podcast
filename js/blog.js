@@ -36,7 +36,7 @@ function formatPageNumber(num) {
 // Carga los posts desde el JSON externo
 async function loadPosts() {
     try {
-        const response = await fetch('/n8n-adama/data/posts.json'); 
+        const response = await fetch('/data/posts.json'); 
         const data = await response.json();
         posts = data.episodes || [];
         renderPosts();
@@ -84,48 +84,55 @@ function renderPosts() {
         container.appendChild(article);
     });
 
-   // 🔥 Actualiza los dos paginadores
-document.querySelectorAll('.pagination').forEach(pagination => {
-    const prevBtn = pagination.querySelector('.prev');
-    const nextBtn = pagination.querySelector('.next');
-    const pageInfo = pagination.querySelector('.page-info');
+    // 🔥 Actualiza los dos paginadores
+    document.querySelectorAll('.pagination').forEach(pagination => {
+        const prevBtn = pagination.querySelector('.prev');
+        const nextBtn = pagination.querySelector('.next');
+        const pageInfo = pagination.querySelector('.page-info');
 
-    pageInfo.textContent = `Pág ${formatPageNumber(currentPage)}/${formatPageNumber(totalPages)}`;
-    prevBtn.disabled = currentPage === 1;
-    nextBtn.disabled = currentPage === totalPages;
-});
-
-// Eventos de paginación (delegados para ambos paginadores)
-document.querySelectorAll('.pagination .prev').forEach(btn => {
-    btn.addEventListener('click', () => {
-        if (currentPage > 1) {
-            currentPage--;
-            renderPosts();
-
-            // 👇 Scroll hacia arriba cuando clicas en paginador inferior
-            if (btn.closest('.pagination').classList.contains('bottom')) {
-                document.querySelector('.pagination.top')
-                    .scrollIntoView({ behavior: 'smooth' });
-            }
-        }
+        pageInfo.textContent = `Pág ${formatPageNumber(currentPage)}/${formatPageNumber(totalPages)}`;
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === totalPages;
     });
-});
+}
 
-document.querySelectorAll('.pagination .next').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const totalPages = Math.ceil(posts.length / postsPerPage);
-        if (currentPage < totalPages) {
-            currentPage++;
-            renderPosts();
+// Configura los eventos de paginación solo una vez
+function setupPaginationEvents() {
+    document.querySelectorAll('.pagination .prev').forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderPosts();
 
-            // 👇 Scroll hacia arriba cuando clicas en paginador inferior
-            if (btn.closest('.pagination').classList.contains('bottom')) {
-                   document.getElementById('page-title')
-                    .scrollIntoView({ behavior: 'smooth' });
+                // 👇 Scroll hacia arriba cuando clicas en paginador inferior
+                if (btn.closest('.pagination').classList.contains('bottom')) {
+                    document.querySelector('.pagination.top')
+                        .scrollIntoView({ behavior: 'smooth' });
+                }
             }
-        }
+        });
     });
+
+    document.querySelectorAll('.pagination .next').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const totalPages = Math.ceil(posts.length / postsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderPosts();
+
+                // 👇 Scroll hacia arriba cuando clicas en paginador inferior
+                if (btn.closest('.pagination').classList.contains('bottom')) {
+                    document.getElementById('page-title')
+                        .scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+}
+
+// 🔥 Inicializa la carga cuando el DOM esté listo
+document.addEventListener('DOMContentLoaded', () => {
+    loadPosts();
+    setupPaginationEvents();
 });
 
-// Inicializa la carga
-loadPosts();
