@@ -373,9 +373,8 @@ a.custom-link:hover {
   color: white;
   text-align: center;
   padding: 0.9rem;
-  font-weight: bold;
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   border-radius: 0 0 10px 10px;
   transition: background 0.3s ease;
 
