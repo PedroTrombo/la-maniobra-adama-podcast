@@ -1,22 +1,21 @@
- const starsContainer = document.querySelector('.stars');
-  const numberOfStars = 150; // Cambia este número para más o menos estrellas
+function seededRandom(seed) {
+  var x = Math.sin(seed++) * 10000;
+  return x - Math.floor(x);
+}
 
-  for (let i = 0; i < numberOfStars; i++) {
-    const star = document.createElement('div');
-    star.classList.add('star');
+const numberOfStars = 150;
+let seed = 42; // cambia este número y tendrás un cielo distinto pero estable
 
-    const size = Math.random() * 3 + 1; // Tamaño entre 1 y 4px
-    star.style.width = `${size}px`;
-    star.style.height = `${size}px`;
+for (let i = 0; i < numberOfStars; i++) {
+  const star = document.createElement('div');
+  star.classList.add('star');
 
-    star.style.top = `${Math.random() * 100}%`;
-    star.style.left = `${Math.random() * 100}%`;
+  const size = seededRandom(seed++) * 3 + 1;
+  star.style.width = `${size}px`;
+  star.style.height = `${size}px`;
 
-    // Duración y retraso aleatorio de la animación para que no parpadeen al mismo tiempo
-    const duration = Math.random() * 5 + 2; // entre 2 y 7 segundos
-    const delay = Math.random() * 5; // entre 0 y 5 segundos
-    star.style.animationDuration = `${duration}s`;
-    star.style.animationDelay = `${delay}s`;
+  star.style.top = `${seededRandom(seed++) * 100}%`;
+  star.style.left = `${seededRandom(seed++) * 100}%`;
 
-    starsContainer.appendChild(star);
-  }
+  starsContainer.appendChild(star);
+}
