@@ -90,7 +90,7 @@ function renderPosts() {
             
         <!-- El replace elimina números al inicio del título seguidos de un punto y espacio.
         Ejemplo: "33. Daredevil..." → "Daredevil..."-->
-        
+
             <h2 class="post-title">${(post.title || 'Sin título').replace(/^\d+\.\s*/, '')}</h2>
 
 
@@ -128,12 +128,6 @@ function setupPaginationEvents() {
             if (currentPage > 1) {
                 currentPage--;
                 renderPosts();
-
-                // 👇 Scroll hacia arriba cuando clicas en paginador inferior
-                if (btn.closest('.pagination').classList.contains('bottom')) {
-                    document.querySelector('.pagination.top')
-                        .scrollIntoView({ behavior: 'smooth' });
-                }
             }
         });
     });
@@ -144,16 +138,11 @@ function setupPaginationEvents() {
             if (currentPage < totalPages) {
                 currentPage++;
                 renderPosts();
-
-                // 👇 Scroll hacia arriba cuando clicas en paginador inferior
-                if (btn.closest('.pagination').classList.contains('bottom')) {
-                    document.getElementById('page-title')
-                        .scrollIntoView({ behavior: 'smooth' });
-                }
             }
         });
     });
 }
+
 
 // 🔥 Inicializa la carga cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
