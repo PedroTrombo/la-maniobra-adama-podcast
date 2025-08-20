@@ -17,5 +17,16 @@ fetch('includes/header.html')
     }
   });
 
+// menu bootstrap
+  const toggle = document.querySelector(".navbar-toggler");
+  const collapse = document.querySelector(".navbar-collapse");
+  const icon = toggle.querySelector(".toggler-icon");
+
+  toggle.addEventListener("click", () => {
+    collapse.classList.toggle("show"); // abre/cierra el menú
+    icon.textContent = collapse.classList.contains("show") ? "✖" : "☰"; // cambia hamburguesa a X
+  });
+
+
 
 
