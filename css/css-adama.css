@@ -40,6 +40,10 @@ body {
   text-align: center;
   padding-top: 0.8em;
 
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  align-items: center;     /* centra verticalmente (opcional) */
+
 }
 
 .nav-container {
