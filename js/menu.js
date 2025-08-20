@@ -1,9 +1,9 @@
 // Cargar el nav dinámicamente
-fetch('includes/nav.html')
-  .then(r => r.text())
-  .then(d => {
+//fetch('includes/nav.html')
+//  .then(r => r.text())
+// .then(d => {
     // Insertar el nav en el DOM
-    document.getElementById('nav-menu').innerHTML = d;
+  //  document.getElementById('nav-menu').innerHTML = d;
 
     // Ahora que el header está en el DOM, seleccionamos los elementos del menú
     const toggle = document.querySelector(".menu-toggle");
