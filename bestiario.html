@@ -214,24 +214,80 @@
 
 
 
-    <!-- Schema.org para SEO -->
-    <script type="application/ld+json">
+<!-- Schema.org para SEO -->
+<!-- JSON-LD: WebPage + ItemList (8 cromos) -->
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "CreativeWork",
-  "name": "Devorado por Python",
-  "image": "https://pedrotrombo.github.io/la-maniobra-adama-podcast/images/bestiario/01-devorado-python.avif",
-  "description": "Pedro y Mario pensaban que Python era solo un lenguaje amigable para principiantes. Pero ahora, cada vez que abren su editor de código, su pantalla se llena de errores y traceback. Entre risas y lágrimas, solo piden que la serpiente los devore de una vez.",
-  "author": {
-    "@type": "Person",
-    "name": "Pedro Trombo"
-  },
-  "creator": {
-    "@type": "Person",
-    "name": "Mario Villatoro"
-  },
-  "genre": "Podcast, Humor, Cultura pop",
-  "inLanguage": "es"
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://pedrotrombo.github.io/la-maniobra-adama-podcast/bestiario.html",
+      "url": "https://pedrotrombo.github.io/la-maniobra-adama-podcast/bestiario.html",
+      "name": "Bestiario - La Maniobra Adama",
+      "inLanguage": "es-ES",
+      "description": "Explora el Bestiario de La Maniobra Adama: criaturas míticas y personajes absurdos del podcast, con historias hilarantes y curiosidades únicas sobre pelis, series y cultura pop.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "La Maniobra Adama",
+        "url": "https://pedrotrombo.github.io/la-maniobra-adama-podcast/"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://pedrotrombo.github.io/la-maniobra-adama-podcast/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Bestiario",
+            "item": "https://pedrotrombo.github.io/la-maniobra-adama-podcast/bestiario.html"
+          }
+        ]
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListOrder": "http://schema.org/ItemListOrderAscending",
+        "numberOfItems": 8,
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "item": {"@id": "#cromo-devorado-python"}},
+          {"@type": "ListItem", "position": 2, "item": {"@id": "#cromo-criptobro-caido"}},
+          {"@type": "ListItem", "position": 3, "item": {"@id": "#cromo-sacerdotisa-shein"}},
+          {"@type": "ListItem", "position": 4, "item": {"@id": "#cromo-el-torreznopata"}},
+          {"@type": "ListItem", "position": 5, "item": {"@id": "#cromo-el-mierdas"}},
+          {"@type": "ListItem", "position": 6, "item": {"@id": "#cromo-el-avis"}},
+          {"@type": "ListItem", "position": 7, "item": {"@id": "#cromo-el-primo-del-mierdas"}},
+          {"@type": "ListItem", "position": 8, "item": {"@id": "#cromo-perrozarpa"}}
+        ]
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "#cromo-devorado-python",
+      "name": "Devorado por Python",
+      "image": "https://pedrotrombo.github.io/la-maniobra-adama-podcast/images/bestiario/01-devorado-python.avif",
+      "description": "Pedro y Mario pensaban que Python era solo un lenguaje amigable para principiantes. Pero ahora, cada vez que abren su editor de código, su pantalla se llena de errores y traceback. Entre risas y lágrimas, solo piden que la serpiente los devore de una vez.",
+      "author": {"@type": "Person", "name": "Pedro Trombo"},
+      "creator": {"@type": "Person", "name": "Mario Villatoro"},
+      "genre": ["Podcast", "Humor", "Cultura pop"],
+      "inLanguage": "es-ES"
+    },
+    {
+      "@type": "CreativeWork",
+      "@id": "#cromo-criptobro-caido",
+      "name": "Criptobro Caído",
+      "image": "https://pedrotrombo.github.io/la-maniobra-adama-podcast/images/bestiario/02-criptobro-caido.avif",
+      "description": "El criptobro apostó su futuro a $Libra, la criptomoneda que el presidente Milei lanzó en Twitter. En minutos, vio cómo su inversión se evaporaba más rápido que sus seguidores en redes sociales. Ahora, su cartera está más vacía que sus promesas de rentabilidad.",
+      "author": {"@type": "Person", "name": "Pedro Trombo"},
+      "creator": {"@type": "Person", "name": "Mario Villatoro"},
+      "genre": ["Podcast", "Humor", "Cultura pop"],
+      "inLanguage": "es-ES"
+    }
+  ]
 }
 </script>
 
