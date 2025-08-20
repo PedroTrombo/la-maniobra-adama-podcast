@@ -112,6 +112,12 @@ body {
     /* siempre encima */
   }
 
+  /* NAV estilos base */
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 1em;
+  }
+
   .nav-links {
     display: flex;
     flex-direction: column;
