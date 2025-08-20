@@ -2,7 +2,7 @@
 fetch('includes/nav.html')
   .then(r => r.text())
   .then(d => {
-    // Insertar el header en el DOM
+    // Insertar el nav en el DOM
     document.getElementById('nav-menu').innerHTML = d;
 
     // Ahora que el header está en el DOM, seleccionamos los elementos del menú
