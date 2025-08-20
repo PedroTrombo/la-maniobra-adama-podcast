@@ -1,4 +1,4 @@
-// Cargar el header dinámicamente
+// Cargar el nav dinámicamente
 fetch('includes/nav.html')
   .then(r => r.text())
   .then(d => {
