@@ -17,15 +17,15 @@
 
 /* Reset y base */
 body {
-  margin: 0;
+   margin: 0;
   font-family: sans-serif;
   color: #ffffff;
   background: linear-gradient(135deg, #62067e, #eb4179, #fb7266);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
+
 
 /* Contenedor principal */
 .container-custom {
@@ -200,6 +200,7 @@ header p {
 }
 
 /* Main y secciones */
+/* Main crece para empujar el footer */
 main {
   flex: 1;
   padding: 20px 0;
