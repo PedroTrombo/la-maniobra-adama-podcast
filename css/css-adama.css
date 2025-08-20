@@ -38,7 +38,8 @@ body {
 .navbar {
   background: transparent;
   text-align: center;
-  padding: 1em 0em 0em 0.8em
+  padding-top: 0.8em;
+
 }
 
 .nav-container {
@@ -58,7 +59,7 @@ body {
 .nav-links {
   display: flex;
   gap: 0.5rem;
-  
+
 }
 
 .nav-links a {
@@ -85,10 +86,26 @@ body {
   border: none;
   color: white;
   cursor: pointer;
+  margin-bottom: 0.2em;
+  ;
+}
+
+.top-header {
+  display: flex;
+  flex-direction: column;
+
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .top-header {
+    flex-direction: column-reverse;
+    /* ahora sí solo afecta al h1 y nav */
+  }
+
+
+
   .menu-toggle {
     display: block;
     z-index: 9999;
@@ -206,6 +223,7 @@ main {
 
 .section p {
   font-size: 1.1rem;
+  text-align: center;
 }
 
 iframe {
@@ -347,20 +365,27 @@ a.custom-link:hover {
   font-size: 1.9rem;
   color: #fff;
   margin: 1rem;
-  letter-spacing: 2px; 
+  letter-spacing: 2px;
 }
 
 #page-title a {
-  text-decoration: none;   /* Quita el subrayado */
-  color: inherit;          /* Hereda el color del h1 */
-  font: inherit;           /* Hereda la tipografía */
-  cursor: pointer;         /* Mantiene el puntero de enlace */
-  transition: opacity 0.2s ease; /* Animación suave */
+  text-decoration: none;
+  /* Quita el subrayado */
+  color: inherit;
+  /* Hereda el color del h1 */
+  font: inherit;
+  /* Hereda la tipografía */
+  cursor: pointer;
+  /* Mantiene el puntero de enlace */
+  transition: opacity 0.2s ease;
+  /* Animación suave */
+
 }
 
 #page-title a:hover,
 #page-title a:focus {
-  opacity: 0.8; /* Ligero cambio de opacidad */
+  opacity: 0.8;
+  /* Ligero cambio de opacidad */
 }
 
 /* Meta: fecha y duración */
