@@ -55,7 +55,7 @@ function formatPageNumber(num) {
 // Carga los posts desde el JSON externo
 async function loadPosts() {
     try {
-        const response = await fetch('/n8n-adama/data/posts.json'); 
+        const response = await fetch('/n8n-adama/data/posts.json');
         const data = await response.json();
         posts = data.episodes || [];
         renderPosts();
@@ -87,7 +87,13 @@ function renderPosts() {
                      alt="${post.title ? `Imagen del episodio '${post.title}'` : 'Imagen del episodio del podcast La Maniobra Adama'}" 
                      class="post-image">
             </div>
-            <h2 class="post-title">${post.title || 'Sin título'}</h2>
+            
+        <!-- El replace elimina números al inicio del título seguidos de un punto y espacio.
+        Ejemplo: "33. Daredevil..." → "Daredevil..."-->
+        
+            <h2 class="post-title">${(post.title || 'Sin título').replace(/^\d+\.\s*/, '')}</h2>
+
+
             <div class="post-meta">
                <span class="post-date">${fechaFormateada}</span> \u2022 
                <span class="post-duration">${post.duration || ''} min</span>
