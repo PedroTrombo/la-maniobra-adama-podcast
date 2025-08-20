@@ -1,7 +1,5 @@
 async function loadIncludes() {
-  // Header
-  const header = await fetch('includes/header.html').then(r => r.text());
-  document.getElementById('header').innerHTML = header;
+
 
   // Nav
   const nav = await fetch('includes/nav.html').then(r => r.text());
