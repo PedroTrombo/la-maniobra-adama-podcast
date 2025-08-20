@@ -199,10 +199,10 @@ header p {
   font-size: 1.1rem;
 }
 
-/* Main y secciones */
+/* Main y secciones: si añades padding el footer se separa de la línea inferior*/
+
 main {
   flex: 1;
-  padding: 20px 0;
 }
 
 .section {
