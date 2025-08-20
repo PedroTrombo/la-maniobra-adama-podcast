@@ -215,10 +215,12 @@ main {
 .section h2 {
   font-family: "Porkys-regular";
   text-transform: uppercase;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   text-align: center;
-  margin: 1rem 0 1.7rem;
+  margin: 1rem 0 1.5rem;
   letter-spacing: 1px;
+  padding: 0 1rem;
+
 }
 
 .section p {
