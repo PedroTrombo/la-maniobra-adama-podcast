@@ -12,7 +12,7 @@
     // Solo añadimos el event listener si los elementos existen
    // if (toggle && navLinks) {
     //  toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+      //  navLinks.classList.toggle("active");
 //});
 //    }
 //  });
