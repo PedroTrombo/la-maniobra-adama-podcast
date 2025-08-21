@@ -501,25 +501,31 @@ a.custom-link:hover {
 
 
 
+
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none; /* quitamos viñetas por defecto */
-    text-align: center; /* centra el contenido de la lista */
+  margin: 0 auto;
+  padding-top:1.5em;
+  padding-bottom:0.3em;
+  list-style: none;        /* quitamos los puntos nativos */
+  max-width: 600px;        /* ancho centrado y legible */
+  text-align: left;        /* el texto queda alineado */
 }
 
 ul li {
-    margin-bottom: 1em;
-    position: relative;
-    padding-left: 1.5em; /* espacio para la estrellita */
-    display: inline-block; /* permite centrar en bloque */
-    text-align: left; /* alinea el texto tras la estrella */
+  position: relative;
+  margin-bottom: 1.2em;
+  padding-left: 1.5em;     /* espacio para el punto */     /* tamaño un poco más legible */
+  line-height: 1.6;
 }
 
 ul li::before {
-    content: "⭐"; /* sustituye la viñeta por estrella */
-    position: absolute;
-    left: 0;
+  content: "•";            /* punto personalizado */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;       /* más grande que el texto */
+  color: #ffcc00;          /* color destacado (amarillo estético) */
 }
 
 /* Media Queries Desktop */
