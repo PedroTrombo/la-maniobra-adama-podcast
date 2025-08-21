@@ -1,13 +1,16 @@
 async function loadIncludes() {
   try {
-    const base = 'https://pedrotrombo.github.io/n8n-adama/includes/';
+    const base = window.location.pathname.includes('/')
+      ? '../includes/'
+      : 'includes/';
 
     // Nav
     const nav = await fetch(base + 'nav.html').then(r => r.text());
-    document.getElementById('nav-menu').innerHTML = nav;
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.innerHTML = nav;
 
-    const toggle = document.getElementById('nav-menu').querySelector('.menu-toggle');
-    const navLinks = document.getElementById('nav-menu').querySelector('.nav-links');
+    const toggle = navMenu.querySelector('.menu-toggle');
+    const navLinks = navMenu.querySelector('.nav-links');
     if (toggle && navLinks) {
       toggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
@@ -25,3 +28,4 @@ async function loadIncludes() {
 }
 
 loadIncludes();
+
