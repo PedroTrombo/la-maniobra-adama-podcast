@@ -1,8 +1,6 @@
 async function loadIncludes() {
   try {
-    const base = window.location.pathname.includes('/')
-      ? '../n8n-adama/includes/'
-      : './n8n-adama/includes/';
+    const base = '/n8n-adama/includes/';
 
     // Nav
     const nav = await fetch(base + 'nav.html').then(r => r.text());
@@ -26,6 +24,9 @@ async function loadIncludes() {
     console.error('Error cargando includes:', error);
   }
 }
+
+loadIncludes();
+
 
 loadIncludes();
 
