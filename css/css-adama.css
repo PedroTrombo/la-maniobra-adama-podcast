@@ -487,6 +487,15 @@ a.custom-link:hover {
     text-align: left;
 }
 
+.section h2.h2-episodio {
+    text-align: left;
+}
+
+.section h3.h3-episodio {
+    text-align: left;
+}
+
+
 
 ul {
     padding-left: 1.5em; /* opcional, para que no quede pegado al borde */
