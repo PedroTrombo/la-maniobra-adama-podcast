@@ -483,8 +483,8 @@ a.custom-link:hover {
 }
 
  /* Episodios podcast */
-.p-episodio {
-  text-align: left;
+.section p.p-episodio {
+    text-align: left;
 }
 
 
