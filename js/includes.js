@@ -1,6 +1,6 @@
 async function loadIncludes() {
   try {
-    const base = '/includes/';
+    const base = 'https://pedrotrombo.github.io/n8n-adama/includes/';
 
     // Nav
     const nav = await fetch(base + 'nav.html').then(r => r.text());
