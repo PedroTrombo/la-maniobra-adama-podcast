@@ -1,7 +1,7 @@
 async function loadIncludes() {
   try {
     const base = window.location.pathname.includes('/')
-      ? '../n8n-adama/includes/'
+      ? './n8n-adama/includes/'
       : 'n8n-adama/includes/';
 
     // Nav
