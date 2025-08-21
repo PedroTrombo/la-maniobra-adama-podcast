@@ -488,6 +488,17 @@ a.custom-link:hover {
 }
 
 
+ul {
+    padding-left: 1.5em; /* opcional, para que no quede pegado al borde */
+    margin: 0; /* elimina márgenes por defecto si quieres control total */
+    list-style-type: disc; /* tipo de viñeta, puedes cambiar a circle, square, etc. */
+}
+
+ul li {
+    margin-bottom: 1em; /* espacio inferior entre cada li */
+}
+
+
 /* Media Queries Desktop */
 @media (min-width: 1200px) {
   .container-custom {
