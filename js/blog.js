@@ -99,7 +99,7 @@ function renderPosts() {
                <span class="post-duration">${post.duration || ''} min</span>
             </div>
             <p class="post-snippet">${truncateText(post.contentSnippet, 270)}</p>
-            <a href="/episodio/${slug}" 
+            <a href="/la-maniobra-adama-podcast/episodio/${slug}" 
                class="post-button" 
                title='${post.title ? post.title + " - Escuchar episodio" : "Escuchar episodio"}'>
                ESCUCHAR AHORA
