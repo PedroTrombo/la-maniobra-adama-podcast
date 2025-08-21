@@ -1,6 +1,6 @@
 async function loadIncludes() {
   try {
-    const base = '/n8n-adama/includes/';
+    const base = '/la-maniobra-adama-podcast/includes/';
 
     // Nav
     const nav = await fetch(base + 'nav.html').then(r => r.text());

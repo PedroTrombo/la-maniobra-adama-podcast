@@ -73,6 +73,9 @@ Si tienes preguntas, sugerencias o simplemente quieres decirnos lo mucho que te 
 Este proyecto web fue construido con amor usando:
 
 - HTML + CSS: Para darle forma y estilo.
+
 - Bootstrap: Porque quién no quiere un diseño responsive sin complicaciones.
-- Dafont: Porque necesitábamos tipografías que reflejaran nuestra personalidad.
-- JavaScript: Aunque aún estamos aprendiendo, se hacía necesario tener el último episodio siempre en la web.
+
+- Dafont: Para tipografías que reflejen nuestra personalidad.
+
+- JavaScript + n8n: Para que cada nuevo episodio de Ivoox se publique automáticamente en la web.
