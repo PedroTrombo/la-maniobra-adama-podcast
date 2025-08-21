@@ -471,6 +471,10 @@ a.custom-link:hover {
   cursor: not-allowed;
 }
 
+ /* Episodios podcast */
+.p-episodio {
+  text-align: left;
+}
 
 
 /* Media Queries Desktop */
