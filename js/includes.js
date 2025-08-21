@@ -1,25 +1,26 @@
 async function loadIncludes() {
   try {
-    // Nav
-    const nav = await fetch('includes/nav.html').then(r => r.text());
-    const navMenu = document.getElementById('nav-menu');
-    navMenu.innerHTML = nav;
+    const base = '/includes/';
 
-    const toggle = navMenu.querySelector(".menu-toggle");
-    const navLinks = navMenu.querySelector(".nav-links");
+    // Nav
+    const nav = await fetch(base + 'nav.html').then(r => r.text());
+    document.getElementById('nav-menu').innerHTML = nav;
+
+    const toggle = document.getElementById('nav-menu').querySelector('.menu-toggle');
+    const navLinks = document.getElementById('nav-menu').querySelector('.nav-links');
     if (toggle && navLinks) {
-      toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        toggle.classList.toggle("open"); // útil si quieres cambiar a "X"
+      toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        toggle.classList.toggle('open');
       });
     }
 
     // Footer
-    const footer = await fetch('includes/footer.html').then(r => r.text());
+    const footer = await fetch(base + 'footer.html').then(r => r.text());
     document.getElementById('footer').innerHTML = footer;
 
   } catch (error) {
-    console.error("Error cargando includes:", error);
+    console.error('Error cargando includes:', error);
   }
 }
 
