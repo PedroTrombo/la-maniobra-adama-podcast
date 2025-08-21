@@ -37,7 +37,7 @@ function generateSlug(title) {
     // Si había número, lo manda al final
     if (number) slug = `${slug}-${number}`;
 
-    return slug + ".html";
+    return slug;
 }
 
 
