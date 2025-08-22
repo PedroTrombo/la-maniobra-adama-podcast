@@ -375,22 +375,22 @@ a.custom-link:hover {
 .post-image-container {
   position: relative;
 }
-
+/*
  .post-image {
 
   display: block;
   width: 100%;
   height: auto;
  }
-/*
+*/
 .post-image {
   margin-bottom: 1.5em;
   display: block;
-  width: 50%;
+  width: 60%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 0 0 2em 2em;} */
+  border-radius: 0 0 2em 2em;} 
 
   
 
