@@ -321,7 +321,7 @@ a.custom-link:hover {
   text-decoration: none;
 }
 
-/* Lista Maniobra Adama */
+/* Lista Maniobra Adama 
 .maniobra-adama ul {
   list-style: none;
   padding: 0;
@@ -339,7 +339,7 @@ a.custom-link:hover {
   font-size: 0.8em;
   margin-right: 0.4em;
   display: inline-block;
-}
+}*/
 
 /* Bestiario */
 .bestiario .card {
@@ -511,6 +511,7 @@ ul {
 }
 
 ul li {
+    font-size: 1em;
     margin-bottom: 1.2em;
     padding-left: 0;    /* quitamos el padding-left que desplaza el texto */
     line-height: 1.6;
