@@ -502,40 +502,19 @@ a.custom-link:hover {
 }
 
 
-
-
 ul {
-  margin: 0 1em;
-  padding-top: 1.4em;
-  padding-bottom: 0.1em;
-  list-style: none;
-  /* quitamos los puntos nativos */
-  max-width: 600px;
-  /* ancho centrado y legible */
-  text-align: center;
-  /* el texto queda alineado */
+    list-style: none;   /* quitamos los puntos nativos */
+    max-width: 500px;   /* ancho centrado y legible */
+    margin: 0 auto;     /* centra el ul en su contenedor */
+    padding: 0;         /* quitamos el padding por defecto */
+    text-align: center; /* centra el texto dentro del ul */
 }
 
 ul li {
-  position: relative;
-  margin-bottom: 1.2em;
-  padding-left: 1.5em;
-  /* espacio para el punto */
-  /* tamaño un poco más legible */
-  line-height: 1.6;
-}
-
-ul li::before {
-  content: "•";
-  /* punto personalizado */
-  position: absolute;
-  left: 2%;
-  top: 28%;
-  transform: translateY(-50%);
-  font-size: 1.2rem;
-  /* más grande que el texto */
-  color: #ffcc00;
-  /* color destacado (amarillo estético) */
+    margin-bottom: 1.2em;
+    padding-left: 0;    /* quitamos el padding-left que desplaza el texto */
+    line-height: 1.6;
+    text-align: center; /* centra el texto dentro del li */
 }
 
 /* Media Queries Desktop */
