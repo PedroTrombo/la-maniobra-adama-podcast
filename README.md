@@ -68,14 +68,19 @@ Si tienes preguntas, sugerencias o simplemente quieres decirnos lo mucho que te 
 
 ---
 
-## 🛠️ Tecnología detrás del sitio
+## 🛠️ Tecnología detrás del sitio  
 
-Este proyecto web fue construido con amor usando:
+Este proyecto web fue ensamblado con amor friki y un poco de cinta aislante digital, usando:  
 
-- HTML + CSS: Para darle forma y estilo.
+- **HTML + CSS**: La base clásica, para que todo tenga forma y estilo.  
+- **Bootstrap**: Porque responsive sin llorar es posible.  
+- **Dafont**: Tipografías que nos representan mejor que nuestra foto del DNI.  
+- **JavaScript + n8n**: El motorcito secreto.  
 
-- Bootstrap: Porque quién no quiere un diseño responsive sin complicaciones.
+Como la web es **estática** y vive feliz en **GitHub Pages**, aquí no hay Node ni PHP en el servidor. Todo lo que pasa “detrás del telón” ocurre gracias a **n8n**, que se encarga de:  
 
-- Dafont: Para tipografías que reflejen nuestra personalidad.
+- Generar un **JSON** con los datos del feed de iVoox para la bitácora del idez.  
+- Automatizar la publicación de cada episodio nuevo.  
+- Pasar la descripción de iVoox por un **modelo LLM**, que fabrica mágicamente el post completo con estructura HTML, metadatos, etiquetas y contenido listo para subir.  
 
-- JavaScript + n8n: Para que cada nuevo episodio de Ivoox se publique automáticamente en la web.
+En resumidas cuentas: **automatización + frikismo + cero backend**.  
