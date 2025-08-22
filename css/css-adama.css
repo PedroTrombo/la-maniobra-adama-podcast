@@ -376,22 +376,22 @@ a.custom-link:hover {
   position: relative;
 }
 
-/* .post-image {
+ .post-image {
 
   display: block;
   width: 100%;
   height: auto;
-}*/
 
+/*
 .post-image {
-  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   display: block;
   width: 50%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 2em; /* Redondea las 4 esquinas */
-}
+  border-radius: 0 0 2em 2em; /* Redondea las 4 esquinas */
+}}*/
 
 /* Título */
 .post-title {
