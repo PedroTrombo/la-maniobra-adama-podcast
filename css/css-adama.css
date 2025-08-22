@@ -41,8 +41,10 @@ body {
   padding-top: 1.2em;
 
   display: flex;
-  justify-content: center; /* centra horizontalmente */
-  align-items: center;     /* centra verticalmente (opcional) */
+  justify-content: center;
+  /* centra horizontalmente */
+  align-items: center;
+  /* centra verticalmente (opcional) */
 
 }
 
@@ -482,50 +484,58 @@ a.custom-link:hover {
   cursor: not-allowed;
 }
 
- /* Episodios podcast */
+/* Episodios podcast */
 .section p.p-episodio {
-   /* text-align: left;*/
+  /* text-align: left;*/
 }
 
 .section h2.h2-episodio {
-   /* text-align: left;*/
-   /* padding-left: 0;*/
-   /* padding-right: 0;*/
+  /* text-align: left;*/
+  /* padding-left: 0;*/
+  /* padding-right: 0;*/
 }
 
 .section h3.h3-episodio {
-   /* text-align: left;*/
-    /*padding-left: 0;*/
-    /*padding-right: 0;*/
+  /* text-align: left;*/
+  /*padding-left: 0;*/
+  /*padding-right: 0;*/
 }
 
 
 
 
 ul {
-  margin: 0 auto;
-  padding-top: 1.3em;
-  padding-bottom:0.1em;
-  list-style: none;        /* quitamos los puntos nativos */
-  max-width: 600px;        /* ancho centrado y legible */
-  text-align: left;        /* el texto queda alineado */
+  margin: 0 1em;
+  padding-top: 1.4em;
+  padding-bottom: 0.1em;
+  list-style: none;
+  /* quitamos los puntos nativos */
+  max-width: 600px;
+  /* ancho centrado y legible */
+  text-align: center;
+  /* el texto queda alineado */
 }
 
 ul li {
   position: relative;
   margin-bottom: 1.2em;
-  padding-left: 1.5em;     /* espacio para el punto */     /* tamaño un poco más legible */
+  padding-left: 1.5em;
+  /* espacio para el punto */
+  /* tamaño un poco más legible */
   line-height: 1.6;
 }
 
 ul li::before {
-  content: "•";            /* punto personalizado */
+  content: "•";
+  /* punto personalizado */
   position: absolute;
-  left: 0;
-  top: 50%;
+  left: 2%;
+  top: 28%;
   transform: translateY(-50%);
-  font-size: 1.2rem;       /* más grande que el texto */
-  color: #ffcc00;          /* color destacado (amarillo estético) */
+  font-size: 1.2rem;
+  /* más grande que el texto */
+  color: #ffcc00;
+  /* color destacado (amarillo estético) */
 }
 
 /* Media Queries Desktop */
@@ -558,14 +568,14 @@ ul li::before {
     font-size: 1rem;
   }
 
-/* Título */
-.post-title {
-  font-family: "Porkys-regular";
-  text-transform: uppercase;
-  font-size: 1.9rem;
-  color: #fff;
-  margin: 1rem;
-  letter-spacing: 2px;
-}
+  /* Título */
+  .post-title {
+    font-family: "Porkys-regular";
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    color: #fff;
+    margin: 1rem;
+    letter-spacing: 2px;
+  }
 
 }
