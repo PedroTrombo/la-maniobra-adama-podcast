@@ -504,7 +504,7 @@ a.custom-link:hover {
 
 ul {
     list-style: none;   /* quitamos los puntos nativos */
-    max-width: 500px;   /* ancho centrado y legible */
+    max-width: 570px;   /* ancho centrado y legible */
     margin: 0 auto;     /* centra el ul en su contenedor */
     padding: 0;         /* quitamos el padding por defecto */
     text-align: center; /* centra el texto dentro del ul */
