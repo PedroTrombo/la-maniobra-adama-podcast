@@ -386,7 +386,6 @@ a.custom-link:hover {
 .post-image {
   margin-bottom: 1.5em;
   display: block;
-  width: 60%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
@@ -512,7 +511,7 @@ a.custom-link:hover {
   /*padding-right: 0;*/
 }
 
-
+/* Listados sin puntos */
 ul {
     list-style: none;   /* quitamos los puntos nativos */
     max-width: 570px;   /* ancho centrado y legible */
@@ -527,6 +526,17 @@ ul li {
     padding-left: 0;    /* quitamos el padding-left que desplaza el texto */
     line-height: 1.6;
     text-align: center; /* centra el texto dentro del li */
+}
+
+/* Enlaces sección Quienes somos */
+.section.maniobra-adama a {
+  color: #fff;
+  text-decoration: none; /* opcional, quita el subrayado */
+}
+
+.section.maniobra-adama a:hover {
+  color: #ddd; /* opcional, para que en hover cambien un poco */
+  text-decoration: underline;
 }
 
 /* Media Queries Desktop */
