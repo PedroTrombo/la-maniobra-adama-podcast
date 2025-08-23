@@ -100,9 +100,10 @@ body {
     flex-direction: column-reverse;
   }
 
-  #page-title {
-        display: none;
-    }
+  #page-title {display: none;}/* Oculta logo mobile */
+  #page-cta{display: none;}/* Oculta parrafo en mobile */
+
+  
 
   .menu-toggle {
     display: block;
