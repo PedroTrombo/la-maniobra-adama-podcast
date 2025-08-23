@@ -1,5 +1,5 @@
 let currentPage = 1;
-const postsPerPage = 1;
+const postsPerPage = 3;
 let posts = [];
 
 // Formatea fecha ISO a "30 JUL 2025"
