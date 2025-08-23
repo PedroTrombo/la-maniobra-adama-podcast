@@ -153,12 +153,7 @@ body {
     padding: 0.8em;
     text-align: left;
   }
-}
 
-
- header h1 span {
-    font-size: 2.3rem;
-  }
 
 /* Estrellas de fondo */
 .stars {
@@ -206,7 +201,7 @@ header h1 span {
   font-family: "Porkys";
   display: block;
   text-transform: uppercase;
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   letter-spacing: 2px;
 }
 
