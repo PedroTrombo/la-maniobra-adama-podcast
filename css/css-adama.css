@@ -20,7 +20,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   color: #ffffff;
-  background: linear-gradient(135deg, #62067e, #eb4179, #fb7266);
+  background: linear-gradient(160deg, #62067e, #eb4179, #fb7266);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
