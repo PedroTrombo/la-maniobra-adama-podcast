@@ -39,13 +39,9 @@ body {
   background: transparent;
   text-align: center;
   padding-top: 1.2em;
-
   display: flex;
   justify-content: center;
-  /* centra horizontalmente */
   align-items: center;
-  /* centra verticalmente (opcional) */
-
 }
 
 .nav-container {
@@ -65,7 +61,6 @@ body {
 .nav-links {
   display: flex;
   gap: 0.5rem;
-
 }
 
 .nav-links a {
@@ -81,7 +76,6 @@ body {
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.2);
   color: #ffffff;
-
 }
 
 /* Botón hamburguesa */
@@ -93,32 +87,24 @@ body {
   color: white;
   cursor: pointer;
   margin-bottom: 0.2em;
-  ;
 }
 
 .top-header {
   display: flex;
   flex-direction: column;
-
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-
   .top-header {
     flex-direction: column-reverse;
-    /* ahora sí solo afecta al h1 y nav */
   }
-
-
 
   .menu-toggle {
     display: block;
     z-index: 9999;
-    /* siempre encima */
   }
 
-  /* NAV estilos base */
   .navbar {
     padding-top: 0;
     padding-bottom: 1em;
@@ -128,10 +114,8 @@ body {
     display: flex;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.95);
-    /* un poco más oscuro para contraste */
     position: absolute;
     top: 70px;
-    /* ajusta según la altura de tu header */
     right: 0;
     left: 0;
     width: 100%;
@@ -145,7 +129,6 @@ body {
 
   .nav-links.active {
     max-height: 500px;
-    /* suficiente para todos los enlaces */
     opacity: 1;
   }
 
@@ -153,7 +136,7 @@ body {
     padding: 0.8em;
     text-align: left;
   }
-
+}
 
 /* Estrellas de fondo */
 .stars {
@@ -175,13 +158,10 @@ body {
 }
 
 @keyframes twinkle {
-
-  0%,
-  100% {
+  0%, 100% {
     opacity: 1;
     transform: scale(1);
   }
-
   50% {
     opacity: 0.3;
     transform: scale(1.5);
@@ -210,8 +190,7 @@ header p {
   font-size: 1.1rem;
 }
 
-/* Main y secciones: si añades padding el footer se separa de la línea inferior*/
-
+/* Main y secciones */
 main {
   flex: 1;
 }
@@ -231,7 +210,6 @@ main {
   margin: 1rem 0 1.1rem;
   letter-spacing: 1px;
   padding: 0 1rem;
-
 }
 
 .section h3 {
@@ -242,7 +220,6 @@ main {
   margin: 1rem 0 1.1rem;
   letter-spacing: 1px;
   padding: 0 1rem;
-
 }
 
 .section p {
@@ -320,26 +297,6 @@ a.custom-link:hover {
   text-decoration: none;
 }
 
-/* Lista Maniobra Adama 
-.maniobra-adama ul {
-  list-style: none;
-  padding: 0;
-}
-
-.maniobra-adama li {
-  margin-bottom: 10px;
-  font-size: 1em;
-  position: relative;
-  padding-left: 15px;
-}
-
-.maniobra-adama li::before {
-  content: "⭐";
-  font-size: 0.8em;
-  margin-right: 0.4em;
-  display: inline-block;
-}*/
-
 /* Bestiario */
 .bestiario .card {
   background: transparent;
@@ -374,23 +331,15 @@ a.custom-link:hover {
 .post-image-container {
   position: relative;
 }
-/*
- .post-image {
 
-  display: block;
-  width: 100%;
-  height: auto;
- }
-*/
 .post-image {
   margin-bottom: 1.5em;
   display: block;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 0 0 2em 2em;} 
-
-  
+  border-radius: 0 0 2em 2em;
+}
 
 /* Título */
 .post-title {
@@ -404,22 +353,15 @@ a.custom-link:hover {
 
 #page-title a {
   text-decoration: none;
-  /* Quita el subrayado */
   color: inherit;
-  /* Hereda el color del h1 */
   font: inherit;
-  /* Hereda la tipografía */
   cursor: pointer;
-  /* Mantiene el puntero de enlace */
   transition: opacity 0.2s ease;
-  /* Animación suave */
-
 }
 
 #page-title a:hover,
 #page-title a:focus {
   opacity: 0.8;
-  /* Ligero cambio de opacidad */
 }
 
 /* Meta: fecha y duración */
@@ -451,8 +393,6 @@ a.custom-link:hover {
   font-size: 1.6rem;
   border-radius: 0 0 10px 10px;
   transition: background 0.3s ease;
-
-  /* Espacio debajo del botón */
 }
 
 .post-button:hover {
@@ -493,48 +433,31 @@ a.custom-link:hover {
   cursor: not-allowed;
 }
 
-/* Episodios podcast */
-.section p.p-episodio {
-  /* text-align: left;*/
-}
-
-.section h2.h2-episodio {
-  /* text-align: left;*/
-  /* padding-left: 0;*/
-  /* padding-right: 0;*/
-}
-
-.section h3.h3-episodio {
-  /* text-align: left;*/
-  /*padding-left: 0;*/
-  /*padding-right: 0;*/
-}
-
 /* Listados sin puntos */
 ul {
-    list-style: none;   /* quitamos los puntos nativos */
-    max-width: 570px;   /* ancho centrado y legible */
-    margin: 0 auto;     /* centra el ul en su contenedor */
-    padding: 0;         /* quitamos el padding por defecto */
-    text-align: center; /* centra el texto dentro del ul */
+  list-style: none;
+  max-width: 570px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
 }
 
 ul li {
-    font-size: 1em;
-    margin-bottom: 1.2em;
-    padding-left: 0;    /* quitamos el padding-left que desplaza el texto */
-    line-height: 1.6;
-    text-align: center; /* centra el texto dentro del li */
+  font-size: 1em;
+  margin-bottom: 1.2em;
+  padding-left: 0;
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* Enlaces sección Quienes somos */
 .section.maniobra-adama a {
   color: #fff;
-  text-decoration: none; /* opcional, quita el subrayado */
+  text-decoration: none;
 }
 
 .section.maniobra-adama a:hover {
-  color: #ddd; /* opcional, para que en hover cambien un poco */
+  color: #ddd;
   text-decoration: underline;
 }
 
@@ -568,7 +491,6 @@ ul li {
     font-size: 1rem;
   }
 
-  /* Título */
   .post-title {
     font-family: "Porkys-regular";
     text-transform: uppercase;
@@ -577,5 +499,4 @@ ul li {
     margin: 1rem;
     letter-spacing: 2px;
   }
-
 }
