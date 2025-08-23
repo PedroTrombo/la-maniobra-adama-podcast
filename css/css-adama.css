@@ -496,6 +496,11 @@ ul li {
     text-align: center;
   }
 
+   #page-title{
+    margin-bottom:0.5rem;
+  }
+
+
   .mobile-only{ /* Oculta botón inicio en desktop */
     display: none;
   }
