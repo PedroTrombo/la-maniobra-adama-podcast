@@ -479,6 +479,13 @@ ul li {
     max-width: 800px;
   }
 
+  .episode-player{ /* Player Ivoox*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:1em;
+  }
+
+
   header h1 span {
     font-size: 2.6rem;
   }
