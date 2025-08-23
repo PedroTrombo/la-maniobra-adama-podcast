@@ -488,6 +488,10 @@ ul li {
     text-align: center;
   }
 
+  .mobile-only{ /* Oculta botón inicio en desktop */
+    display: none;
+  }
+
   .post-image {
   margin-bottom: 1.5em;
   display: block;
