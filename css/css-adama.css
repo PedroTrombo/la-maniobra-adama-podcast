@@ -136,7 +136,20 @@ body {
     padding: 0.8em;
     text-align: left;
   }
+
+.post-image {
+  margin-bottom: 1.5em;
+  width: 70%;
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0 0 2em 2em;
 }
+
+}
+
+
 
 /* Estrellas de fondo */
 .stars {
@@ -332,15 +345,7 @@ a.custom-link:hover {
   position: relative;
 }
 
-.post-image {
-  margin-bottom: 1.5em;
-  width: 70%;
-  display: block;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0 0 2em 2em;
-}
+
 
 /* Título */
 .post-title {
