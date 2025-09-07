@@ -1,2 +1,9 @@
+# Permitir que todos los motores de búsqueda indexen el contenido
 User-agent: *
-Disallow: /
+Disallow:
+
+# Sitemap para que Google encuentre todas las páginas y episodios fácilmente
+Sitemap: https://pedrotrombo.github.io/la-maniobra-adama-podcast/sitemap.xml
+
+# Bloquear carpetas o archivos privados opcionales
+# Disallow: /privado/
