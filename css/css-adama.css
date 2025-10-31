@@ -477,7 +477,6 @@ ul li {
 .section a {
   color: #D8B4FF; /* Lila suave */
   text-decoration: underline;
-  font-weight: bold;
   transition: color 0.3s ease;
 }
 
