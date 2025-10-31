@@ -473,6 +473,18 @@ ul li {
   text-decoration: underline;
 }
 
+/* Enlaces dentro de cualquier .section */
+.section a {
+  color: #D8B4FF; /* Lila suave */
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.section a:hover {
+  color: #FFB6C1; /* Rosa suave al pasar el ratón */
+}
+
 /* Media Queries Desktop */
 @media (min-width: 1200px) {
   .container-custom {
