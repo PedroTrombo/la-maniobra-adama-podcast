@@ -474,13 +474,13 @@ ul li {
 }
 
 /* Enlaces dentro de cualquier .section */
-.section a {
+.p-episodio a {
   color: #D8B4FF; /* Lila suave */
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
-.section a:hover {
+.p-episodio a:hover {
   color: #FFB6C1; /* Rosa suave al pasar el ratón */
 }
 
